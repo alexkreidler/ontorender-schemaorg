@@ -1,0 +1,429 @@
+
+<http://schema.org/Person> <http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A person (alive, dead, undead, or fictional)." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Person" ;
+	<http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> ;
+	<http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Person> .
+
+<http://schema.org/additionalName> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "An additional name for a Person, can be used for a middle name." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "additionalName" .
+
+<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/GeoCoordinates>, <http://schema.org/GeoShape>, <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Place> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/PostalAddress>, <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Physical address of the item." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "address" .
+
+<http://schema.org/affiliation> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Organization> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "An organization that this person is affiliated with. For example, a school/university, a club, or a team." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "affiliation" ;
+	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/memberOf> .
+
+<http://schema.org/alumniOf> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/inverseOf> <http://schema.org/alumni> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/EducationalOrganization>, <http://schema.org/Organization> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "An organization that the person is an alumni of." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "alumniOf" .
+
+<http://schema.org/award> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork>, <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Product>, <http://schema.org/Service> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "An award won by or for this item." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "award" .
+
+<http://schema.org/awards> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork>, <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Product> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://schema.org/supersededBy> <http://schema.org/award> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Awards won by or for this item." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "awards" .
+
+<http://schema.org/birthDate> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Date> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Date of birth." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "birthDate" .
+
+<http://schema.org/birthPlace> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Place> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The place where the person was born." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "birthPlace" .
+
+<http://schema.org/brand> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Product>, <http://schema.org/Service> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Brand>, <http://schema.org/Organization> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "brand" .
+
+<http://schema.org/callSign> <http://schema.org/category> "issue-2109" ;
+	<http://schema.org/domainIncludes> <http://schema.org/BroadcastService>, <http://schema.org/Person>, <http://schema.org/Vehicle> ;
+	<http://schema.org/isPartOf> <http://pending.schema.org> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/2109> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A <a href=\"https://en.wikipedia.org/wiki/Call_sign\">callsign</a>, as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "callSign" ;
+	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+
+<http://schema.org/children> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A child of the person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "children" .
+
+<http://schema.org/colleague> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person>, <http://schema.org/URL> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A colleague of the person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "colleague" .
+
+<http://schema.org/colleagues> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://schema.org/supersededBy> <http://schema.org/colleague> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A colleague of the person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "colleagues" .
+
+<http://schema.org/contactPoint> <http://schema.org/domainIncludes> <http://schema.org/HealthInsurancePlan>, <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/ContactPoint> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A contact point for a person or organization." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "contactPoint" .
+
+<http://schema.org/contactPoints> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/ContactPoint> ;
+	<http://schema.org/supersededBy> <http://schema.org/contactPoint> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A contact point for a person or organization." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "contactPoints" .
+
+<http://schema.org/deathDate> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Date> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Date of death." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "deathDate" .
+
+<http://schema.org/deathPlace> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Place> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The place where the person died." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "deathPlace" .
+
+<http://schema.org/duns> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The Dun &amp; Bradstreet DUNS number for identifying an organization or business person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "duns" ;
+	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+
+<http://schema.org/email> <http://schema.org/domainIncludes> <http://schema.org/ContactPoint>, <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Email address." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "email" .
+
+<http://schema.org/familyName> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Family name. In the U.S., the last name of a Person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "familyName" .
+
+<http://schema.org/faxNumber> <http://schema.org/domainIncludes> <http://schema.org/ContactPoint>, <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Place> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The fax number." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "faxNumber" .
+
+<http://schema.org/follows> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The most generic uni-directional social relation." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "follows" .
+
+<http://schema.org/funder> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork>, <http://schema.org/Event>, <http://schema.org/MonetaryGrant>, <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A person or organization that supports (sponsors) something through some kind of financial contribution." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "funder" ;
+	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/sponsor> .
+
+<http://schema.org/gender> <http://schema.org/category> "issue-2341" ;
+	<http://schema.org/domainIncludes> <http://schema.org/Person>, <http://schema.org/SportsTeam> ;
+	<http://schema.org/isPartOf> <http://pending.schema.org> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/GenderType>, <http://schema.org/Text> ;
+	<http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/2341> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Gender of something, typically a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a>, but possibly also fictional characters, animals, etc. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The <a class=\"localLink\" href=\"http://schema.org/gender\">gender</a> property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender <a class=\"localLink\" href=\"http://schema.org/SportsTeam\">SportsTeam</a> can be indicated with a text value of \"Mixed\"." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "gender" .
+
+<http://schema.org/givenName> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Given name. In the U.S., the first name of a Person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "givenName" .
+
+<http://schema.org/globalLocationNumber> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Place> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The <a href=\"http://www.gs1.org/gln\">Global Location Number</a> (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "globalLocationNumber" ;
+	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+
+<http://schema.org/hasCredential> <http://schema.org/category> "issue-2289" ;
+	<http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/isPartOf> <http://pending.schema.org> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/EducationalOccupationalCredential> ;
+	<http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/2289> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A credential awarded to the Person or Organization." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "hasCredential" .
+
+<http://schema.org/hasOccupation> <http://schema.org/category> "issue-1698" ;
+	<http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Occupation> ;
+	<http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/1698> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The Person's occupation. For past professions, use Role for expressing dates." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "hasOccupation" .
+
+<http://schema.org/hasOfferCatalog> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Service> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/OfferCatalog> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an OfferCatalog listing for this Organization, Person, or Service." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "hasOfferCatalog" .
+
+<http://schema.org/hasPOS> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Place> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Points-of-Sales operated by the organization or person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "hasPOS" .
+
+<http://schema.org/height> <http://schema.org/domainIncludes> <http://schema.org/MediaObject>, <http://schema.org/Person>, <http://schema.org/Product>, <http://schema.org/VisualArtwork> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Distance>, <http://schema.org/QuantitativeValue> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The height of the item." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "height" .
+
+<http://schema.org/homeLocation> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/ContactPoint>, <http://schema.org/Place> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A contact location for a person's residence." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "homeLocation" ;
+	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/location> .
+
+<http://schema.org/honorificPrefix> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "honorificPrefix" .
+
+<http://schema.org/honorificSuffix> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "An honorific suffix following a Person's name such as M.D. /PhD/MSCSW." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "honorificSuffix" .
+
+<http://schema.org/interactionStatistic> <http://schema.org/category> "issue-2421" ;
+	<http://schema.org/domainIncludes> <http://schema.org/CreativeWork>, <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/InteractionCounter> ;
+	<http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/2421> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "interactionStatistic" .
+
+<http://schema.org/isicV4> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Place> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "isicV4" .
+
+<http://schema.org/jobTitle> <http://schema.org/category> "issue-2192" ;
+	<http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/isPartOf> <http://pending.schema.org> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/DefinedTerm>, <http://schema.org/Text> ;
+	<http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/2192> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The job title of the person (for example, Financial Manager)." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "jobTitle" .
+
+<http://schema.org/knows> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The most generic bi-directional social/work relation." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "knows" .
+
+<http://schema.org/knowsAbout> <http://schema.org/category> "issue-1688" ;
+	<http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/isPartOf> <http://pending.schema.org> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text>, <http://schema.org/Thing>, <http://schema.org/URL> ;
+	<http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/1688>, <https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Of a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a>, and less typically of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a>, to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or <a class=\"localLink\" href=\"http://schema.org/JobPosting\">JobPosting</a> descriptions." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "knowsAbout" .
+
+<http://schema.org/knowsLanguage> <http://schema.org/category> "issue-1688" ;
+	<http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/isPartOf> <http://pending.schema.org> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Language>, <http://schema.org/Text> ;
+	<http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/1688>, <https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Of a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a>, and less typically of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a>, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "knowsLanguage" .
+
+<http://schema.org/makesOffer> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/inverseOf> <http://schema.org/offeredBy> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Offer> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A pointer to products or services offered by the organization or person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "makesOffer" .
+
+<http://schema.org/memberOf> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/inverseOf> <http://schema.org/member> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Organization>, <http://schema.org/ProgramMembership> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "An Organization (or ProgramMembership) to which this Person or Organization belongs." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "memberOf" .
+
+<http://schema.org/naics> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The North American Industry Classification System (NAICS) code for a particular organization or business person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "naics" .
+
+<http://schema.org/nationality> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Country> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Nationality of the person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "nationality" .
+
+<http://schema.org/netWorth> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/MonetaryAmount>, <http://schema.org/PriceSpecification> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The total financial value of the person as calculated by subtracting assets from liabilities." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "netWorth" .
+
+<http://schema.org/owns> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/OwnershipInfo>, <http://schema.org/Product> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Products owned by the organization or person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "owns" .
+
+<http://schema.org/parent> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A parent of this person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "parent" .
+
+<http://schema.org/parents> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://schema.org/supersededBy> <http://schema.org/parent> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A parents of the person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "parents" .
+
+<http://schema.org/performerIn> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Event> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Event that this person is a performer or participant in." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "performerIn" .
+
+<http://schema.org/publishingPrinciples> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork>, <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/CreativeWork>, <http://schema.org/URL> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The publishingPrinciples property indicates (typically via <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a>) a document describing the editorial principles of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (or individual e.g. a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a>.<br/><br/>\n\nWhile such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class=\"localLink\" href=\"http://schema.org/funder\">funder</a>) can be expressed using schema.org terminology." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "publishingPrinciples" .
+
+<http://schema.org/relatedTo> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The most generic familial relation." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "relatedTo" .
+
+<http://schema.org/seeks> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Demand> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A pointer to products or services sought by the organization or person (demand)." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "seeks" .
+
+<http://schema.org/sibling> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A sibling of the person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "sibling" .
+
+<http://schema.org/siblings> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://schema.org/supersededBy> <http://schema.org/sibling> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A sibling of the person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "siblings" .
+
+<http://schema.org/sponsor> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork>, <http://schema.org/Event>, <http://schema.org/Grant>, <http://schema.org/MedicalStudy>, <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "sponsor" .
+
+<http://schema.org/spouse> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Person> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The person's spouse." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "spouse" .
+
+<http://schema.org/taxID> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "taxID" ;
+	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+
+<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/ContactPoint>, <http://schema.org/Organization>, <http://schema.org/Person>, <http://schema.org/Place> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The telephone number." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "telephone" .
+
+<http://schema.org/vatID> <http://schema.org/domainIncludes> <http://schema.org/Organization>, <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The Value-added Tax ID of the organization or person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "vatID" .
+
+<http://schema.org/weight> <http://schema.org/domainIncludes> <http://schema.org/Person>, <http://schema.org/Product> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue> ;
+	<http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "The weight of the product or person." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "weight" .
+
+<http://schema.org/workLocation> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/ContactPoint>, <http://schema.org/Place> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "A contact location for a person's place of work." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "workLocation" ;
+	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/location> .
+
+<http://schema.org/worksFor> <http://schema.org/domainIncludes> <http://schema.org/Person> ;
+	<http://schema.org/rangeIncludes> <http://schema.org/Organization> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	<http://www.w3.org/2000/01/rdf-schema#comment> "Organizations that the person works for." ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "worksFor" .
+

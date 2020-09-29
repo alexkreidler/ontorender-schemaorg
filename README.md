@@ -1,5 +1,3 @@
-# Project Name
+# Ontology Rendering for Schema.org
 
-Short description
-
-This is the simplest typescript starter project.
+If you want to build the package, you must run on Linux-like system.

@@ -1,25 +1,15 @@
 {
-  "name": "project",
+  "name": "ontorender-schemaorg",
   "version": "1.0.0",
-  "description": "Project description",
-  "main": "dist/cjs/index.js",
-  "typings": "dist/types/index.d.ts",
+  "description": "Generates schema.org rendered ontology files",
   "author": "Alex Kreidler",
   "license": "MIT",
   "scripts": {
-    "compile:esm": "tsc",
-    "watch:esm": "tsc -w",
-    "compile:cjs": "tsc -p tsconfig.cjs.build.json",
-    "watch:cjs": "tsc -w -p tsconfig.cjs.build.json",
-    "test": "jest",
-    "start": "node dist/cjs/index.js"
-  },
-  "dependencies": {
-    "typescript": "^4.0.3"
+    "start": "./src/process.sh"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.14",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.4.0"
+    "@comunica/actor-init-sparql-file": "^1.17.0",
+    "graphy": "^4.3.3",
+    "rdf-converter": "^1.1.0"
   }
 }
